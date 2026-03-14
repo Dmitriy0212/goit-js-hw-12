@@ -15,7 +15,8 @@ body {
   flex-direction: column;
   align-items: center;
 }
-a {
+a,
+li {
   text-decoration: none;
 }
 .itemIndex {
@@ -120,7 +121,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   column-gap: 24px;
-  row-gap: 48px;
+  row-gap: 65px;
   justify-content: center;
 }
 .gallery-item {
@@ -128,6 +129,9 @@ a {
   background-color: #fff;
   border: 1px solid #ddd;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  list-style-type: none;
+  border: #212121 1px solid;
+  height: 100%;
 }
 .gallery-item img {
   width: 100%;
@@ -140,89 +144,12 @@ a {
   font-size: 14px;
   color: #555;
 }
-.feedback-form {
-  width: 408px;
-  display: flex;
-  flex-direction: column;
-  padding: 24px;
-  gap: 8px;
-}
-.feedback-form > label {
-  display: flex;
-  flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #2e2f42;
-}
-.feedback-form > label > input {
-  height: 40px;
-  width: 100%;
-  border: 1px solid #808080;
-  outline: #808080;
-  border-radius: 4px;
-}
-.feedback-form > label > input:focus-within {
-  outline: #000;
-  border-color: #000;
-}
-.feedback-form > label > input::placeholder {
-  color: #999; /* Задаем цвет */
-  opacity: 0; /* Делаем непрозрачным */
-}
-.feedback-form > label > input:active::placeholder {
-  color: #999; /* Задаем цвет */
-  opacity: 1; /* Делаем непрозрачным */
-}
-
-.feedback-form > button {
-  border-radius: 8px;
-  padding: 8px 16px;
-  width: fit-content;
-  height: 40px;
-  background: #4e75ff;
-  cursor: pointer;
-  color: #fff;
-  box-shadow: none;
-  border-color: inherit;
-  margin-top: 8px;
-}
-.feedback-form > button:hover {
-  background: #6c8cff;
-}
-
-.widget {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.change-color {
-  border-radius: 8px;
-  padding: 8px 16px;
-  width: fit-content;
-  height: 40px;
-  background: #4e75ff;
-  cursor: pointer;
-  color: #fff;
-  box-shadow: none;
-  border-color: inherit;
-  margin-top: 8px;
-}
-
-.change-color:hover {
-  background: #6c8cff;
-}
-
-.field {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-transform: uppercase;
-}
-.timer {
+.info {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 8px;
+  align-items: center;
+}
+.info > p {
+  text-align: center;
 }
