@@ -60,7 +60,7 @@ form.addEventListener('submit', async e => {
 // load more
 loadMore.addEventListener('click', async () => {
   page += 1;
-  showLoader();
+  hideLoadMore();
 
   try {
     const data = await getImagesByQuery(query, page);
@@ -76,8 +76,9 @@ loadMore.addEventListener('click', async () => {
       behavior: 'smooth',
     });
 
-    if (page * 15 >= totalHits) {
-      hideLoadMore();
+    if (page * 15 < totalHits) {
+      showLoader();
+    } else {
       iziToast.info({
         message: "We're sorry, but you've reached the end of search results.",
       });
