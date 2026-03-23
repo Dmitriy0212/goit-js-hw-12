@@ -153,3 +153,6 @@ li {
 .info > p {
   text-align: center;
 }
+.load-more.hidden {
+  display: none;
+}
