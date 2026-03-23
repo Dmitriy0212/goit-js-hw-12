@@ -17,7 +17,7 @@ let totalHits = 0;
 
 form.addEventListener('submit', async e => {
   e.preventDefault();
-  debugger;
+
   query = e.target.elements['search-text'].value.trim();
 
   if (!query) return;
@@ -58,8 +58,8 @@ form.addEventListener('submit', async e => {
 });
 
 loadMore.addEventListener('click', async () => {
-  debugger;
   page += 1;
+  showLoader();
   hideLoadMore();
 
   try {
