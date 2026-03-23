@@ -57,8 +57,8 @@ form.addEventListener('submit', async e => {
   }
 });
 
-// load more
 loadMore.addEventListener('click', async () => {
+  debugger;
   page += 1;
   hideLoadMore();
 
@@ -66,7 +66,6 @@ loadMore.addEventListener('click', async () => {
     const data = await getImagesByQuery(query, page);
     createGallery(data.hits);
 
-    // scroll
     const card = document
       .querySelector('.gallery')
       .firstElementChild.getBoundingClientRect();
@@ -77,7 +76,7 @@ loadMore.addEventListener('click', async () => {
     });
 
     if (page * 15 < totalHits) {
-      showLoader();
+      showLoadMore();
     } else {
       iziToast.info({
         message: "We're sorry, but you've reached the end of search results.",
